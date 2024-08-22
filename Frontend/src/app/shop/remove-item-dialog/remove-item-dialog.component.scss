@@ -1,0 +1,52 @@
+mat-card {
+    width: 400px; 
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  mat-card-content {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form h1 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+  }
+
+  .form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust spacing between buttons */
+    width: 100%; /* Take full width */
+  }
+  
+  .mat-raised-button {
+    margin: 5px;
+    width: 120px;
+  }
+  
+  .form-submit-button {
+    background-color: #00ac06; 
+    color: white;
+  }
+  
+  .form-submit-button:hover {
+    background-color: #009b05; 
+  }
+  
+  .form-cancel-button {
+    background-color: #dc3545; 
+    color: white;
+  }
+  
+  .form-cancel-button:hover {
+    background-color: #c82333; 
+  }
+  

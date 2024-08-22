@@ -1,0 +1,33 @@
+﻿
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.option {
+    display: block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+}
+
+    .option:hover {
+        background-color: #ddd;
+    }
+
+.profile-picture-container {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto; 
+}
+
+.profile-picture {
+    width: 100%;
+    height: auto;
+}

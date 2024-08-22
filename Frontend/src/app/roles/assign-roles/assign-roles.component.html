@@ -1,0 +1,26 @@
+
+<mat-form-field>
+    <mat-label>Select Role</mat-label>
+    <mat-select [formControl]="selectedRole" >
+      <mat-select-trigger>
+        {{ selectedRole.value?.name }} 
+      </mat-select-trigger>
+      <mat-option *ngFor="let role of roleList" [value]="role">{{ role.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Select Users</mat-label>
+    <mat-select [formControl]="selectedUsers" multiple>
+      <mat-select-trigger>
+        {{ selectedUsers.value?.length }} user(s) selected
+      </mat-select-trigger>
+      <mat-option *ngFor="let user of users" [value]="user.id">{{ user.customerName }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+<div class="form-buttons">
+  <button mat-raised-button (click)="assginRole()" class="assign-role-button">Assign Role</button>
+  <button mat-raised-button (click)="removeRole()" class="reomve-role-button">Remove Role</button>
+</div>
+  

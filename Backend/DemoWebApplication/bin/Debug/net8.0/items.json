@@ -1,0 +1,30 @@
+[
+  {
+    "ProductId": 501,
+    "ProductName": "Jersey",
+    "ProductDescription": "Sports",
+    "ProductPrice": 2700.0,
+    "ProductQty": 989.0
+  },
+  {
+    "ProductId": 502,
+    "ProductName": "Boots",
+    "ProductDescription": "Sports",
+    "ProductPrice": 12500.0,
+    "ProductQty": 45.0
+  },
+  {
+    "ProductId": 503,
+    "ProductName": "Dumbells",
+    "ProductDescription": "Fitness",
+    "ProductPrice": 1000.0,
+    "ProductQty": 138.0
+  },
+  {
+    "ProductId": 504,
+    "ProductName": "Kettle bell",
+    "ProductDescription": "Exercise",
+    "ProductPrice": 600.0,
+    "ProductQty": 94.0
+  }
+]

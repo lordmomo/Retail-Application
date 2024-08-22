@@ -1,0 +1,42 @@
+
+<div>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a [routerLink]="['home']" class="navbar-brand">DemoApp</a>
+        </div>
+        <div class="navbar-middle">
+            <a [routerLink]="['shop']" class="nav-link">Shop</a>
+            <a [routerLink]="['list-all-users']" class="nav-link">All Users</a>
+            <ng-container *ngIf="isAdmin">
+                <a [routerLink]="['roles']" class="nav-link">Roles</a>
+            </ng-container>
+            <a [routerLink]="['transaction']" class="nav-link">Transactions</a>
+        </div>
+        <div class="navbar-right">
+            <ng-container *ngIf="loggedIn; else notLoggedInBlock">
+                <button (click)="toggleDrawer()" class="user-button">
+                    user
+                </button>
+                <button (click)="logout()" class="logout-button">Logout</button>
+            </ng-container>
+            <ng-template #notLoggedInBlock>
+                <a [routerLink]="['login']" class="nav-link">Login</a>
+                <a [routerLink]="['register']" class="nav-link">Register</a>
+            </ng-template>
+        </div>
+    </nav>
+
+    <div class="drawer-container" *ngIf="showDrawer">
+        <div class="drawer">
+            <h3>User Options</h3>
+            <ul>
+                <li><a (click)="onShowUserDetails()">Show User Details</a></li>
+                <li><a (click)="onChangeUserDetails()">Change User Details</a></li>
+                <li><a (click)="onChangePassword()">Change Password</a></li>
+                <li><a (click)="onChangeUserProfilePicture()">Change Profile Picture</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+

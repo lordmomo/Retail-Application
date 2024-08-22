@@ -1,0 +1,35 @@
+<table mat-table [dataSource]="userList"  class="mat-elevation-z8 demo-table">
+    <ng-container matColumnDef="Customer Name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header >
+          Customer Name
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.customerName}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Address">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header >
+          Address
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Username">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header >
+          Username
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Password">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header >
+          Password
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.password}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Balance">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header >
+          Balance
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.balance}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="tableHeaders"></tr>
+      <tr mat-row *matRowDef="let row; columns: tableHeaders;"></tr>
+</table>

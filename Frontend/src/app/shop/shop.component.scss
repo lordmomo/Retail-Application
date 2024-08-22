@@ -1,0 +1,242 @@
+.total-container {
+  padding: 50px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #8A46B2;
+    border-radius: 5px;
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #8A46B2;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #b39ddb;
+      color: #6a1b9a;    }
+  }
+}
+
+.cart-button,
+.add-item-button {
+  padding: 10px 20px;
+  margin: 20px;
+  border: none;
+  background-color: #8A46B2;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #b39ddb;
+    color: #6a1b9a;
+  }
+}
+
+.left-right-grid {
+  display: grid;
+  grid-template-columns: 1fr 25%;
+  gap: 25px;
+}
+
+.left-side {
+  grid-column: 1 / 2;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-side {
+  grid-column: 2 / 3;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.item-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  justify-items: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+.example-card {
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  mat-card-header {
+    background-color: #8A46B2;
+    color: white;
+    padding: 12px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    .left-section {
+      flex: 1;
+    }
+
+    .right-section {
+      display: flex;
+      align-items: center;
+    }
+    button{
+      margin-left: 8px;
+    }
+    button.edit-button{
+      color: white;
+    }
+
+    .card-header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+
+  }
+
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .card-subtitle {
+    font-size: 14px;
+    color: #ccc;
+    margin: -8px 0px 16px;
+    text-align: center;
+  }
+
+
+  mat-card-content {
+    padding: 20px;
+
+    .shop-info {
+      color: #888;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+
+      b {
+        color: black;
+      }
+    }
+  }
+
+  mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+
+    .action-input {
+      flex: 0 0 25%;
+      margin-right: 8px;
+    }
+
+    .action-button {
+      flex: 0 0 auto;
+      margin-left: 8px;
+    }
+
+    button {
+      background-color: #8A46B2;
+      color: white;
+      border: none; 
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #b39ddb;
+        color: #6a1b9a;
+            }
+
+      &:first-child {
+        margin-right: 8px;
+        margin-bottom: 8px;
+      }
+    }
+
+    input[type="number"] {
+      padding: 8px;
+      border: 1px solid #8A46B2;
+      border-radius: 4px;
+      width: 20%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  }
+}
+
+.form-submit-button{
+  background-color: #8A46B2;
+  color: white;
+  border: none; 
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #b39ddb;
+    color: #6a1b9a;
+        }
+
+}
+
+.form-cancel-button{
+  background-color: #dc3545;
+  color: white;
+  border: none; 
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #c82333;
+    color: white;
+        }
+
+}

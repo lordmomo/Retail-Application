@@ -1,0 +1,23 @@
+<h3>Your Cart</h3>
+<div class="cart-items" *ngIf="cartItems && cartItems.length > 0">
+  <div>
+    <mat-card *ngFor="let item of cartItems" class="cart-card" >
+      <mat-card-header>
+        <mat-card-title class="card-title">{{item.productName}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h4> Quantity : {{item.productQty}}</h4>
+        <h5> Price: <b>{{item.productPrice}}</b></h5>
+      </mat-card-content>
+      <mat-card-actions>
+        <button (click)="removeItem(item.productId)">Remove</button>
+      </mat-card-actions> 
+    </mat-card>
+    <button (click)="checkoutBill()" class="checkout-button"> Checkout</button>
+
+  </div>
+</div>
+<div *ngIf="!cartItems || cartItems.length === 0" >
+  <p>No items in cart.</p>
+</div>
+

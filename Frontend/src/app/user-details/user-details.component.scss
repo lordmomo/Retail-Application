@@ -1,0 +1,63 @@
+.user-details {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #312e2e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .user-info {
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+
+      .info-label {
+        font-weight: bold;
+        color: #666;
+        flex: 0 0 150px;
+      }
+
+      .info-value {
+        flex: 1;
+        color: #333;
+      }
+    }
+  }
+
+  .profile-image-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%; 
+    margin: 0 auto 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container */
+    object-position: center; /* Centers the image within the container */
+    display: block;
+  }
+
+  .not-found {
+    color: #dc3545; 
+    padding: 10px;
+    border: 1px solid #dc3545;
+    border-radius: 5px;
+    text-align: center;
+  }
+}

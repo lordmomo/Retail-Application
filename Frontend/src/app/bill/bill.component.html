@@ -1,0 +1,23 @@
+<div class="bill-container">
+    <h2>Order Summary</h2>
+    <div class="bill-items">
+      <div *ngFor="let item of cartItems" class="bill-item">
+        <div class="item-details">
+          <h3>{{ item.productName }}</h3>
+          <p>{{ item.productDescription }}</p>
+        </div>
+        <div class="item-quantity">
+          <p>Quantity: {{ item.selectedQuantity }}</p>
+        </div>
+        <div class="item-price">
+          <p>Price: ${{ item.productPrice }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="total">
+        <button (click)="deduceBalance()">Checkout</button>
+      <h3>Total Amount: ${{ getTotalAmount() }}</h3>
+    </div>
+
+  </div>
+  

@@ -1,0 +1,21 @@
+
+
+.mat-card {
+    padding: 30px;
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.mat-form-field {
+    display: block;
+}
+
+.newAccountLeft{
+    color: #1976d2; 
+    text-decoration: none; 
+    cursor: pointer; }

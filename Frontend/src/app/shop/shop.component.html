@@ -1,0 +1,55 @@
+<div class="total-container">
+
+  <div class="search-bar">
+    <input type="text" (input)="search($event)" (keyup.enter)="onSearch()" placeholder="Search">
+    <button (click)="onItemSearchButtonClicked()">Search</button>
+  </div>
+
+  <button class="cart-button" (click)="toogleCardItems()">{{showCart ? 'Hide Cart' : 'Show Cart'}}</button>
+  <button class="add-item-button" (click)="addItemInShop()" *ngIf="isRoleAdmin">Add new item in shop</button>
+  <button class="add-item-button" (click)="toggleView()">
+    {{ showFavourites ? 'Show All Items' : 'Show Favourite Items' }}
+  </button>
+  <div class="left-right-grid">
+    <div class="left-side">
+      <div class="item-container">
+        <mat-card *ngFor="let item of shownShopItems" class="example-card" appearance="outlined">
+          <mat-card-header>
+            
+              <div class="left-section">
+                <mat-card-title class="card-title">{{item.productName}}</mat-card-title>
+                <mat-card-subtitle class="card-subtitle">{{item.productCategoryName}}</mat-card-subtitle>
+              </div>
+              <div class="right-section" *ngIf="isRoleAdmin">
+                <button mat-icon-button color="primary" (click)="editItem(item)">
+                  <mat-icon>edit</mat-icon>
+                </button>
+                
+                <button mat-icon-button color="warn" (click)="deleteItem(item.productId)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+            
+          </mat-card-header>
+          <mat-card-content>
+            <p class="shop-info">
+              {{item.productDescription}}
+            </p>
+            <h3>Price: <b>{{item.productPrice}}</b></h3>
+            <h3>Remaining: <b>{{item.productQty}}</b></h3>
+          </mat-card-content>
+          <mat-card-actions>
+            <input class="action-input" type="number" [(ngModel)]="item.selectedQuantity" min="1" placeholder="Quantity"
+              value="1">
+            <button class="action-button" mat-button (click)="addToCart(item)">Add Item</button>
+            <button class="action-button" mat-button (click)="saveFavourite(item)">Save</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <div class="right-side" *ngIf="showCart">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>

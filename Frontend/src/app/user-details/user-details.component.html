@@ -1,0 +1,34 @@
+<div class="user-details">
+  <h2>User Details</h2>
+  <div class="user-info" *ngIf="user; else notFound">
+
+    <div class="profile-image-container" *ngIf="profileImage">
+      <img [src]="profileImage" alt="Profile Image" class="profile-image">
+    </div>
+    <div class="info-row">
+      <span class="info-label">Username:</span>
+      <span class="info-value">{{ user.username }}</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Customer Name:</span>
+      <span class="info-value">{{ user.customerName }}</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Address:</span>
+      <span class="info-value">{{ user.address }}</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Balance:</span>
+      <span class="info-value">{{ user.balance | currency:'USD':'symbol':'1.2-2' }}</span>
+    </div>
+  </div>
+ 
+  
+  <ng-template #notFound>
+    <div class="not-found">
+      <p>User not found.</p>
+    </div>
+  </ng-template>
+</div>
+
+<router-outlet></router-outlet>

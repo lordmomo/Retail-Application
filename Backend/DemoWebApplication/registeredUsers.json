@@ -1,0 +1,51 @@
+[
+  {
+    "CustomerName": "ram",
+    "Address": "kathmandu",
+    "Username": "ram123",
+    "Password": "qweasd123",
+    "Balance": 950100.0
+  },
+  {
+    "CustomerName": "hari",
+    "Address": "mnn",
+    "Username": "hari123",
+    "Password": "hari1234",
+    "Balance": 19080.0
+  },
+  {
+    "CustomerName": "kavi",
+    "Address": "ktm",
+    "Username": "kavi123",
+    "Password": "kavi12345",
+    "Balance": 1005700.0
+  },
+  {
+    "CustomerName": "daniel",
+    "Address": "lon",
+    "Username": "daniel1234",
+    "Password": "daniel123",
+    "Balance": 1234.0
+  },
+  {
+    "CustomerName": "pogba",
+    "Address": "fra",
+    "Username": "pogba123",
+    "Password": "pogba123",
+    "Balance": 123244.0
+  },
+  {
+    "CustomerName": "Andy",
+    "Address": "Lille",
+    "Username": "andy1234",
+    "Password": "andy1234",
+    "Balance": 4000.0
+  },
+  {
+    "CustomerName": "kobe",
+    "Address": "ktm",
+    "Username": "kobe1234",
+    "Password": "kobe1234",
+    "Balance": 48400.0
+  }
+]

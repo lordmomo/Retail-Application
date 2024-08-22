@@ -1,0 +1,27 @@
+.mat-card-content {
+    padding: 20px; 
+}
+
+.mat-form-field {
+    width: 40%;
+    // margin-bottom: 10px; 
+    padding-right: 10px;
+}
+
+
+
+button[type="submit"] {
+    margin-top: 10px; 
+    display: block;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .mat-form-field {
+        width: calc(100% - 20px); /* Adjust for smaller screens */
+    }
+}

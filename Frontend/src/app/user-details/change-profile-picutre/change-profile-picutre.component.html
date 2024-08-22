@@ -1,0 +1,5 @@
+
+<form [formGroup]="changeProfileImage" (ngSubmit)="onSubmit()" class="form-container">
+    <input type="file" (change)="onFileSelected($event)" accept="image/*" formControlName="picture">
+    <button type="submit"> Upload Image</button>
+  </form>

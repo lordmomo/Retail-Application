@@ -1,0 +1,13 @@
+
+<mat-card>
+    <mat-card-content>
+      <form (ngSubmit)="onSubmitDeleteItem()">
+        <h1>Do you want to remove the item from shop?</h1>
+        <div class="form-buttons">
+            <button type="submit" mat-raised-button class="form-submit-button">Yes</button>
+            <button type="button" mat-raised-button class="form-cancel-button" (click)="onDeleteItemformCancel()">Cancel</button>
+        </div>
+  
+      </form>
+    </mat-card-content>
+  </mat-card>

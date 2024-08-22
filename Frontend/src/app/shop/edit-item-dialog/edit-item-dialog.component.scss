@@ -1,0 +1,31 @@
+.form-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px; 
+    width: 100%; 
+  }
+
+   
+  .mat-raised-button {
+    margin: 5px;
+    width: 120px;
+  }
+  
+  .form-submit-button {
+    background-color: #00ac06; 
+    color: white;
+  }
+  
+  .form-submit-button:hover {
+    background-color: #009b05; 
+  }
+  
+  .form-cancel-button {
+    background-color: #dc3545; 
+    color: white;
+  }
+  
+  .form-cancel-button:hover {
+    background-color: #c82333; 
+  }
+  
